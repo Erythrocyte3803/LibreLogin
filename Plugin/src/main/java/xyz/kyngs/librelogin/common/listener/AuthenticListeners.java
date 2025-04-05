@@ -29,7 +29,7 @@ import java.util.regex.Pattern;
 public class AuthenticListeners<Plugin extends AuthenticLibreLogin<P, S>, P, S> {
 
     @SuppressWarnings("RegExpSimplifiable") //I don't believe you
-    private static final Pattern NAME_PATTERN = Pattern.compile("[a-zA-Z0-9_]*");
+    private static final Pattern NAME_PATTERN = Pattern.compile("[a-zA-Z0-9_\u0080-\ud7ff]*");
 
     protected final Plugin plugin;
     protected final PlatformHandle<P, S> platformHandle;
